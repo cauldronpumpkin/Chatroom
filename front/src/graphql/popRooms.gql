@@ -1,0 +1,8 @@
+query {
+  rooms(limit: 4, order_by: {chats: desc}) {
+    chats
+    id
+    name
+    online
+  }
+}

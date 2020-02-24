@@ -1,0 +1,9 @@
+subscription ($id: uuid!) {
+  message(where: {roomId: {_eq: $id}}) {
+    id
+    body
+    byUser
+    created_at
+    roomId
+  }
+}

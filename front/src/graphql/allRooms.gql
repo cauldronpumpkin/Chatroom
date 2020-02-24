@@ -1,0 +1,8 @@
+query MyQuery {
+  rooms(distinct_on: name){
+    name
+    id
+    online
+    chats
+  }
+}

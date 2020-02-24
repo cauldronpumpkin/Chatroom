@@ -1,0 +1,11 @@
+mutation ($body: String!, $byUser: String!, $roomId: uuid!) {
+  insert_message(objects: {body: $body, byUser: $byUser, roomId: $roomId}) {
+    returning {
+      id
+      created_at
+      byUser
+      body
+      roomId
+    }
+  }
+}

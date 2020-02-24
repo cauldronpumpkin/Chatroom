@@ -1,0 +1,10 @@
+mutation ($name: String!) {
+  insert_rooms(objects: {name: $name}) {
+    returning {
+      chats
+      id
+      name
+      online
+    }
+  }
+}

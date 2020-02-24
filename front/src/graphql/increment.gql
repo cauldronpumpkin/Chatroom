@@ -1,0 +1,10 @@
+mutation ($id: uuid!, $chats: Int!, $online: Int!) {
+  update_rooms(where: {id: {_eq: $id}}, _inc: {chats: $chats, online: $online}) {
+    returning {
+      id
+      online
+      chats
+      name
+    }
+  }
+}
